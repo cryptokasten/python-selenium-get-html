@@ -1,0 +1,45 @@
+#+TITLE: Python Selenium: Get HTML
+#+TAGS: cryptokasten, python, selenium, browser-automation
+#+PROPERTY: header-args:sh :session *shell python-selenium-get-html sh* :results silent raw
+#+PROPERTY: header-args:python :session *shell python-selenium-get-html python* :results silent raw
+#+OPTIONS: ^:nil
+
+[[https://github.com/cryptokasten][file:https://img.shields.io/badge/dynamic/json.svg?url=https://api.github.com/users/cryptokasten&label=Cryptokasten&query=$.public_repos]]
+
+** System environment
+
+- Python 3.7.0
+
+- geckodriver 0.24.0
+
+Python modules
+
+- selenium==3.141.0
+
+** Imports
+
+#+BEGIN_SRC python
+from selenium import webdriver
+#+END_SRC
+
+** Init driver
+
+#+BEGIN_SRC python
+driver = webdriver.Firefox()
+#+END_SRC
+
+** Get page
+
+#+BEGIN_SRC python
+driver.get("https://en.wikipedia.org")
+#+END_SRC
+
+** Print source
+
+#+BEGIN_SRC python
+print(browser.page_source)
+#+END_SRC
+
+** References
+
+1. https://pythonbasics.org/selenium-get-html/
